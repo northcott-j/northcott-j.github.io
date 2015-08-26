@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>About Us</title>
+<style>
+/*reset area*/
+html, p, body, h1, h2, h3, h4, ul, ol, li {
+	margin:0px;
+	padding:0px;
+	font-family: Adobe Devanagari;}
+	
+html {background-color: #111111;}
+	#wrapper {margin: auto; margin-top: auto; width:712px; height: 1156px; background: #001111 url("../images/aboutusback.jpg") top left; background-size: 712px 100%; padding: 78px 124px 78px 124px;}
+		#internalwrap {width: 712px; height: 1146px; background: #111111 url("../images/aboutusinner.jpg") top left no-repeat;}
+			#pagenav {float: left; height: 21px; width: 397px; margin-top: 165px; padding: 3px 0 6px 6px;}
+				#home {float: left; height: 24px; margin: 2px 130px 5px 70px; font-family: Adobe Devanagari; font-style: italic; font-size: 23px;}
+				#contactus {float: left; height: 24px; font-family: Adobe Devanagari; font-style: italic; font-size: 23px; margin-top: 1px;}
+					#contactus:hover, #home:hover {color: #0003c3;}
+					
+			#NUDJ {clear: both; float: left; width: 712px; height: 100px; background: #ffffff url("../images/NUDJ.jpg") top left;}
+			
+			#fog {clear: both; float: left; height: 208px; width: 290px; background-color: white; border: 5px solid #0003c3; margin-top: 25px; margin-bottom: 60px; margin-left: 5px;}
+				#fogcap {height: 16px; width: 290px;}
+					#fogcap p {font-family: Adobe Devanagari; font-style: italic; font-size: 20px;}
+				#fogdiv {float: right; height: 218px; width: 350px; background-color: pink; margin: 25px 5px 0 0;}
+					#fogthumb {position: absolute; float: left; height: 218px; width: 350px; background-color: #0003c3; line-height: 1.7em; padding:10px 10px 10px 10px; color: white;}
+						#fogthumb h1 {margin-bottom: 14px;}
+						#foghumb p {float: left; line-height: 2.5em; font-family: Adobe Devanagari; font-style: italic;}
+					#fogfull {height: 268px; width: 400px; background-color: #0003c3; text-align: left; padding: 20px 35px 30px 10px; color: white;}
+						#fogfull a {text-decoration: none; color: white;}
+						#fogfull a:hover {color: black;}
+						
+			#alllights {clear: both; float: right; height: 208px; width: 290px; background-color: white; border: 5px solid #0003c3; margin-right: 5px;}
+				#lightcap {height: 16px; width: 290px;}
+					#lightcap p {float: right; font-family: Adobe Devanagari; font-style: italic; font-size: 20px;}
+			#alhouse {position: relative; float: left; height: 278px; width: 400px;}	
+				#aldiv {float: left; height: 218px; width: 350px; background-color: pink; margin: 0px 0px 0px 5px;}
+					#althumb {position: absolute; float: left; height: 218px; width: 350px; background-color: #0003c3; padding: 5px 10px 5px 5px; color: white; line-height: 2.5em;}
+						#althumb p {float: left; line-height: 2.5em; text-align: center; font-family: Adobe Devanagari; font-style: italic;}
+						#jphoto {float: left; height: 208px; width: 170px; background: #111111 url("../images/jphoto.jpg") top left no-repeat; margin-right: 25px;}
+						#althumb h1 {text-align: justify; margin-top: 40px;}
+					#alfull {height: 268px; width: 400px; background-color: #0003c3;  padding: 20px 35px 30px 10px; color: white;}
+						#jbio {height: 269px; width: 395px; float: left;}
+			
+			#slideshow {clear: both; float: left; height: 208px; width: 290px; background-color: white; border: 5px solid #0003c3; margin-left: 5px;}
+				#slidecap {height: 16px; width: 290px;}
+					#slidecap p {font-family: Adobe Devanagari; font-style: italic; font-size: 20px;}
+			#slidediv {float: right; height: 218px; width: 350px; background-color: pink; margin: 0px 5px 0 0;}
+				#slidethumb {float: left; height: 218px; width: 350px; background-color: #0003c3; padding: 5px 5px 5px 10px; color: white; line-height: 2.5em;}
+					#tphoto {float: right; height: 208px; width: 170px; background: #111111 url("../images/tphoto.jpg") top left no-repeat; margin-right: 15px; margin-left: 15px;}
+					#slidethumb h1 {text-align: center; margin-top: 40px;}
+					#slidethumb p {float: right; line-height: 2.5em; text-align: justify; margin-right: 15px; font-family: Adobe Devanagari; font-style: italic;}
+				#slidefull {height: 268px; width: 400px; background-color: #0003c3;  padding: 20px 20px 30px 10px; color: white;}
+					#tbio {height: 269px; width: 395px; float: left;}
+</style>
+</head>
+
+<body>
+<!--Script Section-->
+<script src="../Supporting Files/expansion.js"></script>
+<script>
+isLarge = false; 
+$(document).ready(function(){
+  $("#fogdiv").click(function(){
+    $("#aldiv").animate({height:(isLarge ? '218px' : '218px')});
+    $("#aldiv").animate({width:(isLarge ? '350px' : '350px')});
+    $("#slidediv").animate({height:(isLarge ? '218px' : '218px')});
+    $("#slidediv").animate({width:(isLarge ? '350px' : '350px')});
+    $("#althumb").animate({height:(isLarge ? '218px' : '218px')});
+    $("#althumb").animate({width:(isLarge ? '350px' : '350px')});
+    $("#slidethumb").animate({height:(isLarge ? '218px' : '218px')});
+    $("#slidethumb").animate({width:(isLarge ? '350px' : '350px')});
+    $("#Tim").animate({opacity:(isLarge ? '1' : '1')});
+    $("#althumb").animate({opacity:(isLarge ? '1' : '1')});
+    $("#slidethumb").animate({opacity:(isLarge ? '1' : '1')});
+    $("#fogthumb").animate({opacity:(isLarge ? '1' : '0')});
+    $("#fogdiv").animate({height:(isLarge ? '218px' : '276px')});
+    $("#fogdiv").animate({width:(isLarge ? '350px' : '398px')});
+    isLarge = !isLarge;    
+  });
+});
+</script>
+<script>
+isLarge = false; 
+$(document).ready(function(){
+  $("#aldiv").click(function(){
+    $("#slidediv").animate({height:(isLarge ? '218px' : '218px')});
+    $("#slidediv").animate({width:(isLarge ? '350px' : '350px')});
+    $("#fogdiv").animate({height:(isLarge ? '218px' : '218px')});
+    $("#fogdiv").animate({width:(isLarge ? '350px' : '350px')});
+    $("#slidethumb").animate({height:(isLarge ? '218px' : '218px')});
+    $("#slidethumb").animate({width:(isLarge ? '350px' : '350px')});
+    $("#fogthumb").animate({height:(isLarge ? '218px' : '218px')});
+    $("#fogthumb").animate({width:(isLarge ? '350px' : '350px')});
+    $("#Tim").animate({opacity:(isLarge ? '1' : '1')});
+    $("#fogthumb").animate({opacity:(isLarge ? '1' : '1')});
+    $("#slidethumb").animate({opacity:(isLarge ? '1' : '1')});
+    $("#althumb").animate({opacity:(isLarge ? '1' : '0')});
+    $("#aldiv").animate({height:(isLarge ? '218px' : '276px')});
+    $("#aldiv").animate({width:(isLarge ? '350px' : '398px')});
+    isLarge = !isLarge;    
+  });
+});
+</script>
+<script>
+isLarge = false; 
+$(document).ready(function(){
+  $("#slidediv").click(function(){
+    $("#fogdiv").animate({height:(isLarge ? '218px' : '218px')});
+    $("#fogdiv").animate({width:(isLarge ? '350px' : '350px')});
+    $("#aldiv").animate({height:(isLarge ? '218px' : '218px')});
+    $("#aldiv").animate({width:(isLarge ? '350px' : '350px')});
+    $("#fogthumb").animate({height:(isLarge ? '218px' : '218px')});
+    $("#fogthumb").animate({width:(isLarge ? '350px' : '350px')});
+    $("#althumb").animate({height:(isLarge ? '218px' : '218px')});
+    $("#althumb").animate({width:(isLarge ? '350px' : '350px')});
+    $("#fogthumb").animate({opacity:(isLarge ? '1' : '1')});
+    $("#althumb").animate({opacity:(isLarge ? '1' : '1')});
+    $("#Tim").animate({opacity:(isLarge ? '1' : '0')});
+    $("#slidethumb").animate({height:(isLarge ? '218px' : '0px')});
+    $("#slidethumb").animate({width:(isLarge ? '350px' : '0px')});
+    $("#slidethumb").animate({opacity:(isLarge ? '1' : '0')});
+    $("#slidediv").animate({height:(isLarge ? '218px' : '268px')});
+    $("#slidediv").animate({width:(isLarge ? '350px' : '400px')});
+    isLarge = !isLarge;    
+  });
+});
+</script>
+<!--end of Script Section-->
+
+<div id="wrapper">
+	
+	<div id="internalwrap">
+		
+		<div id="pagenav">
+			<div id="home" onclick="location.href='../index.html';" style="cursor: pointer;">
+				<p>Home</p>
+			</div>
+			<div id="contactus" onclick="location.href='contactus.html';" style="cursor: pointer;">
+				<p>Contact Us</p>
+			</div>
+		</div> <!--pagenav end-->
+		
+		<div id="NUDJ"></div> <!--banner-->
+		
+		<div id="fog"> <!--fog video-->
+			<iframe style="margin: 5px 5px 5px 5px;" width="280" height="198" src="http://www.youtube.com/embed/guMumbup6BM" 			frameborder="0" allowfullscreen>
+			</iframe>
+			<div id="fogcap">
+			<p>Lights synced with music through fog.</p>
+			</div>
+		</div> <!--end of fog video div-->
+		<div id="fogdiv" style="position: relative; overflow:hidden;">
+			<div id="fogthumb"> <!--top click-->
+				<h1>What We Do<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&<br>What We've Done</h1>
+				<p>(click for more information)</p>
+			</div> <!--end of top click-->
+			<div id="fogfull"> <!--Explanation-->
+				<p>
+				NUDJ (new-DJ or N-U-DJ) was created in order to satisfy a growing demand for a local DJ who was both reliable and affordable. They have serviced: proms, homecomings, dances, reunions, bridal showers, and household parties. The equipment<br>is extremely versatile and can be used in many different environments. NUDJ has been mentioned in a couple articles in The CavChronLINE:
+				<br><li><a href="http://cavchronline.com/803/news/homecoming-overdue/">Homecoming Overdue</a></li>
+				<li><a href="http://cavchronline.com/1160/features/business-is-booming/">Business is Booming</a></li>
+				</p>
+			</div> <!--end of explanation-->
+		</div> <!-- end of fog write up-->
+		
+		<div id="alllights"> <!--all lights video-->
+			<iframe style="margin: 5px 5px 5px 5px;" width="280" height="198" src="http://www.youtube.com/embed/qRZ_O-0tAog" 			frameborder="0" allowfullscreen>
+			</iframe>
+			<div id="lightcap">
+			<p>Lights and sound equipment in a gym.</p>
+			</div>
+		</div> <!--end of all lights video div-->
+		<div id="alhouse"> <!--Houses Jonathan explaination-->
+			<div id="aldiv" style="position: absolute; overflow:hidden;">
+				<div id="althumb"> <!--top click-->
+					<div id="jphoto"></div>
+					<h1>Jonathan Northcott</h1>
+					<p>(click for bio)</p>
+				</div> <!--end of top click-->
+				<div id="alfull"> <!--explanation-->
+					<div id="jbio">
+						<p>Jonathan is a Senior at Hollis-Brookline high school and is Vice President of the Class of 2014. He has an extensive technological background and has been working with audio and video equipment for four years. Technical maintenance and<br>management are his chief responsibilities.</p>
+					</div> 
+				</div> <!--end of explanation-->
+			</div> <!--end of all lights write up-->
+		</div> <!--End of housing-->
+		
+		<div id="slideshow"> <!--slideshow video-->
+			<iframe style="margin: 5px 5px 5px 5px;" width="280" height="198" src="http://www.youtube.com/embed/ar91ilNpUVc" 			frameborder="0" allowfullscreen>
+			</iframe>
+			<div id="slidecap">
+			<p>Slideshow of equipment setup.</p>
+			</div>
+		</div> <!--end of slideshow video div-->
+		<div id="slidediv" style="position:relative;overflow:hidden;">
+			<div id="slidethumb"> <!--top click-->
+				<div id="tphoto"></div>
+				<h1 id="Tim">Tim Udelsman</h1>
+				<p>(click for bio)</p>
+			</div> <!--end of top click-->
+			<div id="slidefull"> <!--explanation-->
+				<div id="tbio">
+					<p>Tim is a Senior at Hollis-Brookline high school and is the<br>President of the student body. Tim has experience both as a musical performer and as a service provider having worked in retail. Customer satisfaction and communication efficiency are<br>his utmost concerns.</p>
+				</div>
+			</div> <!--end of explanation-->
+		</div> <!--end of slideshow write up-->
+		
+	</div> <!--End of internalwrap-->
+ 
+    
+</div> <!--end of wrapper div-->
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>NUDJs Service</title>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45506553-1', 'nudjs.com');
+  ga('send', 'pageview');
+</script>
+
+<style>
+/*reset area*/
+html {height: 100%;}
+body {height: 70%;}
+html, p, body, h1, h2, h3, h4, ul, ol, li {
+	margin:0px;
+	padding:0px;}
+html {background-color: #111111;}
+#wrapper {margin: auto; width:712px; height: 100%; background: #001111 url("images/index720p.jpg") top left; background-size: 712px 100%; padding: 6% 124px 8% 124px;}
+	#internalwrap {width: 712px; height: 494px; background: #111111 url("images/internalback.jpg") top left no-repeat;}
+		#motto {float: left; height: 21px; width: 397px; margin-top: 166px; padding: 3px 0 6px 6px; font-family: Adobe Devanagari; font-style: italic; font-size: 23px; font-weight: 400;}
+		#auhighlight {float: left; height: 178px; width: 262px; /*background-color: black;*/ margin: 95px 0 0 50px;}
+			#aboutus {clear: both; float: left; height: 168px; width: 252px; background-color: #0003c3; margin: 5px 5px 5px 5px;}
+				#mail {height:84px; width: 126px; margin: 42px 0px 0px 63px; background: #111111 url("images/mail.jpg") top left no-repeat;}
+			#auhighlight:hover {background-color: black;}
+		#cuhighlight {float: left; height: 178px; width: 262px; margin: 95px 0 0 95px}
+			#contactus {float: left; height: 168px; width: 252px; background-color: #0003c3; margin: 5px 5px 5px 5px;}
+				#book {height:84px; width: 126px; margin: 39px 0px 0px 63px; background: #111111 url("images/book.jpg") top left no-repeat;}
+			#cuhighlight:hover {background-color: black}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+	
+	<div id="internalwrap">
+		
+		<div id="motto">
+			<p>"We are bringing back the service to DJing."</p>
+		</div>
+		
+		<div id="auhighlight">
+			<div id="aboutus" onclick="location.href='pages/aboutus.html';" style="cursor: pointer;">
+			<!--<a href="../../Brime&Stone/site/index.html" id="aboutuslink"> <p>click</p></a>-->
+			<div id="book"></div>
+			</div>
+		</div> <!--auhighlight closing tag-->
+		
+		<div id="cuhighlight">
+			<div id="contactus" onclick="location.href='pages/contactus.html';" style="cursor: pointer;">
+				<div id="mail"></div>
+			</div>
+		</div> <!--end of cuhighlight-->
+		
+	</div> <!--End of internalwrap-->
+ 
+</div> <!--end of wrapper div-->
+</body>
+
+</html>

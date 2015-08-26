@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+        <meta charset="UTF-8" />
+        <title>What's My Homework?</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/indexstyle.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+<script type="text/javascript" src="js/waypoints.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Oldenburg|Paprika|Merienda+One|Alike+Angular' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<!--Start Welcome-->
+	<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+		<header>
+                <h1 data-stellar-ratio="-3.7">What's My Homework?</h1>
+                <h2 data-setellar-ratio="2.2">Every class in one place.</h2>
+                </header>
+                
+		<article class="classname">Welcome Slide</article>
+
+                <h3 class="h3bottom">Login</h3>
+		<a class="button" data-slide="2"></a>
+                <h3 class="h3bottom" style="left: 54.4%;">Sign Up</h3>
+	</div><!--End Welcome-->
+
+
+<!--Start Login-->
+	<div class="slide abs" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+<h1 class="slidetitle" data-stellar-ratio="1.3" style="position: absolute; top: 2%;">Schedule Login</h1>		
+
+<div data-stellar-ratio=".9" id="login" style="height: 200px; width: 200px;">
+
+      
+      <form style="color: white; font-size: 15px; text-align: left; float: left;"name="login">
+        First Name:<input style="margin-top: 10px; margin-bottom: 15px;" type="text" name="userid"/><br>
+        Last Initial:<input onKeyPress="return check(this.form)" style="margin-top: 10px; margin-bottom: 8px;" type="text" name="lstint"/><br>
+        <input style="font-weight: 600; color: #3a3a3a;" type="button" onKeyPress="return check(this.form)" onclick="check(this.form)" value="Login"/>
+        <input style="font-weight: 600; color: #3a3a3a;" type="reset" value="Cancel"/>
+        <script src="js/schedules.js"></script>
+      </form>
+      
+</div>
+	    <a class="button" data-slide="3" style="left: 48%"></a>
+            <a class="button invert" data-slide="1" title=""></a>
+	</div><!--Login-->
+
+<!--Start Sign Up-->	
+	<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
+
+		<div class="classname">Sign Up</div>
+<h1 class="slidetitle" data-stellar-ratio=".3">Sign Up</h1>
+<div id="rcontainer" data-stellar-ratio="2"><!--Start Required Container-->
+<!--Name-->
+<form action="https://docs.google.com/forms/d/1TqyIBqDT5-LXrcOIqvSA6DQRzTwhYeNySDcvoVHsz7A/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol style="padding-left: 0">
+<div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label aria-todo" for="entry_1460821860"><div class="ss-q-title">First Name:&nbsp*
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label></div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input style="background-color: rgba(255, 255, 255, 0.6);" type="text" name="entry.1460821860" value="" class="ss-q-short required" id="entry_1460821860" dir="auto" aria-label="First Name:  " aria-required="true" required="" title="">
+<div class="error-message"></div>
+</div></div></div>
+
+<!--Last Initial-->
+<div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-text" style="margin: 5px 0 5px 0;"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label aria-todo" for="entry_1548076663"><div class="ss-q-title">Last Initial:&nbsp*
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label></div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input style="background-color: rgba(255, 255, 255, 0.6);" type="text" name="entry.1548076663" value="" class="right ss-q-short" id="entry_1548076663" dir="auto" aria-label="Last Initial  " aria-required="true" required="" title="">
+<div class="error-message"></div>
+</div></div></div>
+
+<!--Email-->
+<div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label aria-todo" for="entry_1049277462"><div class="ss-q-title">Email:
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input style="background-color: rgba(255, 255, 255, 0.6);" type="text" name="entry.1049277462" value="" class="right ss-q-short" id="entry_1049277462" dir="auto" aria-label="Email:  " title="">
+<div class="error-message"></div>
+</div></div></div>
+</div><!--End Required Container-->
+
+<div id="qcontainer" data-stellar-ratio="1.3"><!--Start Question Container-->
+<div id="direction" class="ss-q-title">Subject/Teacher:</div>
+<!--Per 1-->
+<div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label aria-todo" for="entry_292164567">
+<div class="ss-q-help ss-secondary-text period" dir="ltr">Per 1:</div></label>
+<input style="background-color: rgba(255, 255, 255, 0.6);" type="text" name="entry.292164567" value="" class="ss-q-short" id="entry_292164567" dir="auto" aria-label="Class/Teacher: Per 1: " title="">
+<div class="error-message"></div>
+</div></div></div>
+
+<!--Per 2-->
+<div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label aria-todo" for="entry_1248524791"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text period" dir="ltr">Per 2:</div></label>
+<input style="background-color: rgba(255, 255, 255, 0.6);" type="text" name="entry.1248524791" value="" class="ss-q-short" id="entry_1248524791" dir="auto" aria-label=" Per 2: " title="">
+<div class="error-message"></div>
+</div></div></div>
+
+<!--Per 3-->
+<div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label aria-todo" for="entry_275235289"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text period" dir="ltr">Per 3:</div></label>
+<input style="background-color: rgba(255, 255, 255, 0.6);" type="text" name="entry.275235289" value="" class="ss-q-short" id="entry_275235289" dir="auto" aria-label=" Per 3: " title="">
+<div class="error-message"></div>
+</div></div></div>
+
+<!--Per 4-->
+<div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label aria-todo" for="entry_92939013"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text period" dir="ltr">Per 4:</div></label>
+<input style="background-color: rgba(255, 255, 255, 0.6);" type="text" name="entry.92939013" value="" class="ss-q-short" id="entry_92939013" dir="auto" aria-label=" Per 4: " title="">
+<div class="error-message"></div>
+</div></div></div>
+
+<!--Per 5-->
+<div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label aria-todo" for="entry_1628622343"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text  period" dir="ltr">Per 5:</div></label>
+<input style="background-color: rgba(255, 255, 255, 0.6);" type="text" name="entry.1628622343" value="" class="ss-q-short" id="entry_1628622343" dir="auto" aria-label=" Per 5: " title="">
+<div class="error-message"></div>
+</div></div></div>
+
+<!--Per6-->
+<div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label aria-todo" for="entry_1369767879"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text period" dir="ltr">Per 6:</div></label>
+<input style="background-color: rgba(255, 255, 255, 0.6);" type="text" name="entry.1369767879" value="" class="ss-q-short" id="entry_1369767879" dir="auto" aria-label=" Per 6: " title="">
+<div class="error-message"></div>
+</div></div></div>
+
+<!--Per 7-->
+<div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label aria-todo" for="entry_1851115518"><div class="ss-q-title">
+</div>
+<div class="ss-q-help ss-secondary-text period" dir="ltr">Per 7:</div></label>
+<input style="background-color: rgba(255, 255, 255, 0.6);" type="text" name="entry.1851115518" value="" class="ss-q-short" id="entry_1851115518" dir="auto" aria-label=" Per 7: " title="">
+<div class="error-message"></div>
+</div></div></div>
+
+
+<input type="hidden" name="draftResponse" value="[]
+">
+<input type="hidden" name="pageHistory" value="0">
+
+<input type="hidden" name="fbzx" value="2690064452803967817">
+
+<div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+<input id="submit" type="submit" name="submit" value="Submit" id="ss-submit">
+</tr></tbody></table></div></ol> </form> <!--End Form-->
+</div> <!--End Question Container-->
+		<a class="button invert" style="left: 50%;" data-slide="2" title=""></a>
+	</div><!--End Sign Up-->
+
+
+
+    </body>
+</html>
