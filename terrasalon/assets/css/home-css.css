@@ -1,8 +1,8 @@
 body{background: #ffffff url("../../images/bckgrnd.jpg") no-repeat; background-size: cover;}
 /*Allow percentage heights*/
-html{height: 100%;}
+body, html{height: 100%;}
 
-body {height: 93%; color:#666; font:300 15px/15px Roboto,Arial,Helvetica;background-color:#fff;-webkit-font-smoothing:antialiased;}
+body {color:#666; font:300 15px/15px Roboto,Arial,Helvetica;background-color:#fff;-webkit-font-smoothing:antialiased;}
 
 a{color:#00a9c6; text-decoration:none;}
 a:hover{color:#666;}
@@ -53,11 +53,6 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 #homeBoxes figcaption a:hover{text-decoration: none;padding: 0 3em;}
 /*home-boxes*/
 
-/*footer*/
-.footer{position: absolute; bottom: 0px; background-color: rgba(1,1,1,.8); color: #fff; font-size: 1em;color: #aaa; height: 7%; width: 100%; display: table; padding-top: 1%;}
-.footer a{color: #aaa;margin: 0 1em; }
-.footer p{display: table-cell; vertical-align: middle;}
-
 @media (max-width: 1200px) {
 	body{font:300 13px/13px Roboto,Arial,Helvetica;}
 	.process ul li{margin:0 0.5em; }
@@ -98,5 +93,4 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 	h2.text-center{text-align: left;font-size: 1.7em;}
 	h4 {font: 300 1.2em Roboto,Arial,Helvetica;}
     #homeBoxes figure {display: block; width: 100%;}
-    .footer{position: relative;}
 }
