@@ -21,8 +21,8 @@ define('DB_NAME', 'wordpress');
 /** MySQL database username */
 define('DB_USER', 'pi');
 
-define('WP_HOME','http://nudjs.me/blog/wordpress');
-define('WP_SITEURL','http://nudjs.me/blog/wordpress');
+define('WP_HOME','http://jdnorthcott.com/legacy/wordpress');
+define('WP_SITEURL','http://jdnorthcott.com/legacy/wordpress');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'northcottj');
