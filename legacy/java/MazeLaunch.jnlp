@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jnlp spec="1.0+" codebase=
-"http://http://jdnorthcott.com/legacy/java" 
+"http://jdnorthcott.com/legacy/java" 
     href="MazeLaunch.jnlp">
     <information>
         <title>Dynamic Tree Demo</title>
