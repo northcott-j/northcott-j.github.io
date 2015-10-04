@@ -6,6 +6,10 @@
         <title>Dynamic Tree Demo</title>
         <vendor>Dynamic Team</vendor>
     </information>
+    
+    <security>
+  <all-permissions/>
+</security>
     <resources>
         <!-- Application Resources -->
         <j2se version="1.7+"
