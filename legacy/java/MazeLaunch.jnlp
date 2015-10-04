@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+"
+    href="MazeLaunch.jnlp">
+    <information>
+        <title>Dynamic Tree Demo</title>
+        <vendor>Dynamic Team</vendor>
+    </information>
+    <resources>
+        <!-- Application Resources -->
+        <j2se version="1.7+"
+              href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="MazeGame.jar"
+            main="true" />
+
+    </resources>
+    <application-desc
+         name="Dynamic Tree Demo Application"
+         main-class=
+           "ExamplesMaze"
+         width="300"
+         height="300">
+     </application-desc>
+     <update check="background"/>
+</jnlp> 
