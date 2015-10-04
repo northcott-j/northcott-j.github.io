@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jnlp spec="1.0+" codebase=
 "http://jdnorthcott.com/legacy/java/FI" 
-    href="MazeLaunch.jnlp">
+    href="FILaunch.jnlp">
     <information>
         <title>Dynamic Tree Demo</title>
         <vendor>Dynamic Team</vendor>
