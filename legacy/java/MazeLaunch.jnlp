@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jnlp spec="1.0+"
+<jnlp spec="1.0+" codebase=
+"http://http://jdnorthcott.com/legacy/java" 
     href="MazeLaunch.jnlp">
     <information>
         <title>Dynamic Tree Demo</title>
@@ -14,7 +15,7 @@
 
     </resources>
     <application-desc
-         name="Dynamic Tree Demo Application"
+         name="MazeGame"
          main-class=
            "ExamplesMaze"
          width="300"
