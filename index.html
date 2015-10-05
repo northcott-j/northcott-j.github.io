@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="A collection of my prior experiences and personal projects">
 	<meta name="author" content="Jonathan Northcott">
+    
+    <!--TODO: Favicon-->
 
 	<title>Jonathan Northcott</title>
 
@@ -98,7 +100,7 @@
 						<h2 class="pfblock-title">This is what I do</h2>
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
-							No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around.
+                            <!--Potential Subtitle here-->
 						</div>
 					</div>
 
@@ -117,7 +119,7 @@
 						<div class="iconbox-text">
 							<h3 class="iconbox-title">Design</h3>
 							<div class="iconbox-desc">
-				                *Yata yata yata design yata yita clients*
+				                I have experience creating graphics and websites
 							</div>
 						</div>
 					</div>
@@ -133,7 +135,7 @@
 						<div class="iconbox-text">
 							<h3 class="iconbox-title">Web Programming</h3>
 							<div class="iconbox-desc">
-								*Maybe shouldn't say programming*
+								Designed and deployed tools to be used on the web
 							</div>
 						</div>
 					</div>
@@ -149,7 +151,7 @@
 						<div class="iconbox-text">
 							<h3 class="iconbox-title">Marketing</h3>
 							<div class="iconbox-desc">
-								*Something about building several businesses*
+								Launched, branded and advertised a couple businesses
 							</div>
 						</div>
 					</div>
@@ -165,7 +167,7 @@
 						<div class="iconbox-text">
 							<h3 class="iconbox-title">Development</h3>
 							<div class="iconbox-desc">
-							*Programming in several languages*	
+							Worked in several languages and coding styles
                             </div>
 						</div>
 					</div>
@@ -191,7 +193,7 @@
 						<h2 class="pfblock-title">My works</h2>
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
-							No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around.
+							<!--Potential Subtitle here-->
 						</div>
 					</div>
 
@@ -235,7 +237,7 @@
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
                             <img src="assets/images/item-3.jpg" alt="img01"/>
-                            <figcaption>
+                            <figcaption onclick="location.href='assets/pages/web-development.html'">
                                 <h2>Web <span>Development</span></h2>
                                 <p>Web Tools built for clients</p>
                             </figcaption>			
@@ -262,7 +264,7 @@
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
                             <img src="assets/images/item-6.jpg" alt="img01"/>
-                            <figcaption>
+                            <figcaption onclick="location.href='assets/pages/resume.pdf'">
                                 <h2>Formal <span>Résumé</span></h2>
                                 <p>Download a PDF Résumé</p>
                             </figcaption>			
@@ -281,7 +283,7 @@
 
 	<!-- Portfolio end -->
     
-	<!-- Contact start -->
+<!-- Contact start -->
 
 	<section id="contact" class="pfblock">
 		<div class="container">
@@ -290,7 +292,6 @@
 				<div class="col-sm-6 col-sm-offset-3">
 
 					<div class="pfblock-header">
-                        <!--TODO: Update to contact and change text #weirdsounding-->
 						<h2 class="pfblock-title">Drop me a line</h2>
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
@@ -302,27 +303,28 @@
 
 			</div><!-- .row -->
 
+<!--TODO: Fix contact form submission-->            
 			<div class="row">
 
 				<div class="col-sm-6 col-sm-offset-3">
-<!--TODO: Figure out how to get the form to submit to northcott.j@husky.neu.edu-->
-					<form id="contact-form" role="form">
+
+					<form id="contact-form" action="http://formspree.io/northcott.j@husky.neu.edu" method="POST">
 						<div class="ajax-hidden">
 							<div class="form-group wow fadeInUp">
 								<label class="sr-only" for="c_name">Name</label>
-								<input type="text" id="c_name" class="form-control" name="c_name" placeholder="Name">
+								<input type="text" id="c_name" class="form-control" name="name" placeholder="Name">
 							</div>
 
 							<div class="form-group wow fadeInUp" data-wow-delay=".1s">
 								<label class="sr-only" for="c_email">Email</label>
-								<input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+								<input type="email" id="c_email" class="form-control" name="_replyto" placeholder="E-mail">
 							</div>
 
 							<div class="form-group wow fadeInUp" data-wow-delay=".2s">
-								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Message"></textarea>
+								<textarea class="form-control" id="c_message" name="message" rows="7" placeholder="Message"></textarea>
 							</div>
 
-							<button type="submit" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Send Message</button>
+							<button type="submit" value="Send" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Send Message</button>
 						</div>
 						<div class="ajax-response"></div>
 					</form>
