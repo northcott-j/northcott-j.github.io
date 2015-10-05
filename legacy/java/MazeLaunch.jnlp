@@ -3,8 +3,8 @@
 "http://jdnorthcott.com/legacy/java" 
     href="MazeLaunch.jnlp">
     <information>
-        <title>Dynamic Tree Demo</title>
-        <vendor>Dynamic Team</vendor>
+        <title>The Maze Game</title>
+        <vendor>Jonathan Northcott & Raj Narayan</vendor>
     </information>
     <resources>
         <!-- Application Resources -->

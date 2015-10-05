@@ -3,8 +3,8 @@
 "http://jdnorthcott.com/legacy/java/FI" 
     href="FILaunch.jnlp">
     <information>
-        <title>Dynamic Tree Demo</title>
-        <vendor>Dynamic Team</vendor>
+        <title>Forbidden Island Game</title>
+        <vendor>Jonathan Northcott & Raj Narayan</vendor>
     </information>
     
     <security>
