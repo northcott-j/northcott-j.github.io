@@ -156,10 +156,10 @@
 				$("#fspeeName").val(c_name);
                 $("#fspeeEmail").val(c_email);
                 $("#fspeeMsg").val(c_message);
-                $("fspeeForm").submit();
+                document.getElementById("fspeeForm").submit();
                  $("#contact-form")[0].reset();
                 response.fadeIn(500);
-				response.html('Your form has been submitted.');
+				response.html('Your form has been submitted<br>courtesy of Formspree');
 				}           
             	return false;
 			});
