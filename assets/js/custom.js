@@ -153,10 +153,13 @@
 			}
 
 			else {
-				response.fadeIn(500);
-                $("#contact-form")[0].reset();
+				$("#fspeeName").val(c_name);
+                $("#fspeeEmail").val(c_email);
+                $("#fspeeMsg").val(c_message);
+                $("fspeeForm").submit();
+                 $("#contact-form")[0].reset();
+                response.fadeIn(500);
 				response.html('Your form has been submitted.');
-							
 				}           
             	return false;
 			});
