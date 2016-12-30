@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
           content="Homepage for the original chapter of Chi Sigma at Northeastern University Boston Massachusetts">
-    <meta name="author" content="">
+    <meta name="author" content="Alex Melagrano">
 
     <title>Chi Sigma->Est.2014</title>
 
@@ -43,6 +43,21 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <!-- Aquarelle effect -->
+    <script src="js/aquarelle.js"></script>
+       <script src="https://ramotion.github.io/aquarelle/bower_components/three.js/build/three.js"></script>
+
+<script src="https://ramotion.github.io/aquarelle/bower_components/aquarelle/Aquarelle.js"></script>
+
+<script src="https://ramotion.github.io/aquarelle/bower_components/three.js/examples/js/postprocessing/EffectComposer.js"></script>
+
+<script src="https://ramotion.github.io/aquarelle/bower_components/three.js/examples/js/postprocessing/ClearPass.js"></script>
+<script src="https://ramotion.github.io/aquarelle/bower_components/aquarelle/AquarellePass.js"></script>
+<script src="https://ramotion.github.io/aquarelle/bower_components/three.js/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://ramotion.github.io/aquarelle/bower_components/three.js/examples/js/shaders/CopyShader.js"></script>
+
+<script src="https://bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js"></script>
 
 </head>
 
@@ -71,7 +86,7 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#members">Members</a>
+                        <a class="page-scroll" href="#index-members">Members</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#events">Events</a>
@@ -87,40 +102,184 @@
     </nav>
 
     <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Chi Sigma</h1>
-                        <p class="intro-text">The original chapter of XΣ<br>Founded at Northeastern in Boston, MA</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+ 
 
+<style>
+
+    html {
+        background-size: cover;
+        display: -webkit-flex;
+        display: flex;
+        height: 100%;
+    }
+
+
+
+    .fade {
+        opacity: 0;
+    }
+
+    img {
+        display: none;
+    }
+    canvas {
+        left: 50%;
+        height: 100%;
+        max-height: 600px;
+        width: 100%;
+        max-width: 450px;
+        position: absolute;
+        top: 53%;
+    }
+    .logo {
+        background-size: contain;
+        height: 27px;
+        left: 30px;
+        position: absolute;
+        top: 24px;
+        width: 29px;
+    }
+    .menu {
+        background-size: contain;
+        height: 7px;
+        position: absolute;
+        right: 36px;
+        top: 34px;
+        width: 239px;
+    }
+    .title {
+        background-size: contain;
+        height: 38px;
+        left: 50%;
+        margin-left: -124px;
+        margin-top: -19px;
+        position: absolute;
+        top: 50%;
+        width: 248px;
+    }
+
+    .buttons {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        left: 50%;
+        margin-left: -115px;
+        margin-top: 40px;
+        position: absolute;
+        top: 50%;
+        width: 230px;
+    }
+    .icon {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 56px;
+        width: 56px;
+    }
+
+</style>
+
+<div class="fade">
+    <img src="img/crest.png" id="aquarelle_img">
+    <div class="top">
+        <div class="logo"></div>
+        <div class="menu"></div>
+    </div>
+    <div class="title"></div>
+    <div class="buttons">
+        <div class="icon" style="background-image: url(img/icon01.png);"></div>
+        <div class="icon" style="background-image: url(img/icon02.png);"></div>
+        <div class="icon" style="background-image: url(img/icon03.png);"></div>
+    </div>
+</div>
+
+<script>
+
+    var fade = document.querySelector('.fade');
+    var topNav = document.querySelector('.top');
+    var title = document.querySelector('.title');
+    var icons = Array.prototype.slice.call(document.querySelectorAll('.icon'));
+
+    var image = document.getElementById('aquarelle_img');
+    var aquarelle = new Aquarelle('img/crest-bg-white.png', 'img/mask.png', {
+        autoplay: true,
+        loop: false,
+        // Controls the swirl/distortion
+        fromAmplitude: 70,
+        toAmplitude: 0,
+        // Controls the shimmer
+        fromFrequency: 10,
+        toFrequency: 7,
+        // Controls the size of the revealed part of the canvas
+//        fromOffset: -30,
+        toOffset: 60
+        // Duration of animation
+//        duration: -
+    });
     
-        <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About XΣ</h2>
-                <!--History-->
-                <p>	Founded by a group of like-minded individuals simply looking for a new way to experience Greek life, Chi Sigma represents the potential of what humans can do.  
-                    By centering our philosophy on enjoyment, productivity, creativity, and respect, members are encouraged to follow their passions while expanding their outlook on the life that surrounds them.</p>
+    function scrollReset() {
+        var body = document.body;
+        aquarelle.progress = body.scrollTop / (body.scrollHeight - window.innerHeight);
+        aquarelle.reset();
+    }
+    
+    aquarelle.addEventListener('created', function() {
+        var canvas = this.getCanvas();
+        canvas.removeAttribute('style');
+        image.parentNode.insertBefore(canvas, image.nextSibling);
+        image.parentNode.removeChild(image);
+    });
 
-                    <p>Chi Sigma’s primary objective is to merely enhance the lives of all its members and all those we work with.  The perfection in simplicity is so often overlooked, and we’re here to unearth it.</p>
-            <a href="pages/about.html" class="btn btn-default btn-lg">Learn More</a>
-            </div>
+    aquarelle.addEventListener('changed', function(event) {
+        fade.style.opacity = this.transitionInRange(0, 1, 0, 1000);
+        
+//        fade.style.opacity = this.transitionInRange(1, 0, 7183, 7933);
+
+        topNav.style.opacity = this.transitionInRange(0, 1, 4330, 5660);
+
+        var canvas = this.getCanvas();
+        canvas.style.webkitFilter = 'blur(' + this.transitionInRange(24, 0, 1500) + 'px)';
+        canvas.style.webkitTransform = canvas.style.transform = 'translate(-50%, -50%) scale(' + this.transitionInRange(.75, 1) + ')';
+
+        title.style.opacity = this.transitionInRange(0, 1, 0, 2016);
+        title.style.webkitTransform = title.style.transform = 'scale(' + this.transitionInRange(.8, 1, 0, 5883) + ')';
+
+        icons.forEach(function(icon) {
+            icon.style.webkitFilter = 'blur(' + event.target.transitionInRange(4, 0, 3433, 4149) + 'px)';
+            icon.style.opacity = event.target.transitionInRange(0, 1, 3433, 4266);
+            icon.style.webkitTransform = icon.style.transform = 'scale(' + event.target.transitionInRange(1.3, 1, 3433, 4400) + ')';
+        });
+    });
+
+</script>
+    
+    <!-- Placeholder Section -->
+    <section id="spacer">
+        <div class="container">
+        
         </div>
     </section>
+    
+    <!-- About Section -->
+    <div class="index-about-wrapper">
+        <section id="about" class="container content-section text-center index-about">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>About XΣ</h2>
+                    <!--History-->
+                    <p>	Founded by a group of like-minded individuals simply looking for a new way to experience Greek life, Chi Sigma represents the potential of what humans can do.  
+                        By centering our philosophy on enjoyment, productivity, creativity, and respect, members are encouraged to follow their passions while expanding their outlook on the life that surrounds them.</p>
 
+                        <p>Chi Sigma’s primary objective is to merely enhance the lives of all its members and all those we work with.  The perfection in simplicity is so often overlooked, and we’re here to unearth it.</p>
+                <a href="pages/about.html" class="btn btn-default btn-lg">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
     <!-- Members Section -->
-    <section id="members" class="content-section text-center">
+    <section id="index-members" class="content-section text-center">
         <div class="members-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -133,44 +292,78 @@
     </section>
     
         <!-- Events Section -->
-    <section id="events" class="content-section text-center">
-        <div class="events-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Upcoming Events</h2>
-                    <p>Find out the times and locations of Chi Sigma Rush and Chapter events.
-                        <br>Attendance is open to anyone who is interested.</p>
-                    <a href="pages/events.html" class="btn btn-default btn-lg">View Event Calendar</a>
+    <div class="index-events-wrapper">
+        <section id="events" class="content-section text-center">
+            <div class="events-section">
+                <div class="container">
+                    <div class="event-text col-lg-8 col-lg-offset-2">
+                        <h2>Upcoming Events</h2>
+                        <p>Find out the times and locations of Chi Sigma Rush and Chapter events.<br>Attendance is open to anyone who is interested.</p>
+                        <a href="pages/events.html" class="btn btn-default btn-lg">View Event Calendar</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Chi Sigma</h2>
-                <p>Feel free to email us with questions, suggestions, feedback on events, or to just say hello!</p>
-                <p><a href="mailto:info@chisigma.co">info@chisigma.co</a>
-                </p>
-               <!-- <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul> -->
+    <div class="index-events-wrapper">
+        <section id="contact" class="container content-section text-center index-contact">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Contact Chi Sigma</h2>
+                    <p>Feel free to email us with questions, suggestions, feedback on events, or to just say hello!</p>
+                    <p>
+                    </p>
+                    <ul class="list-inline banner-social-buttons">
+                         <li>
+                             <a href="https://twitter.com/chisigma_neu" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                         </li>
+                         <li>
+                             <a href="https://www.facebook.com/chisigma" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                         </li>
+                         <li>
+                             <a href="mailto:info@chisigma.co" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-mail-reply fa-fw"></i> <span class="network-name">E-mail</span></a>
+                         </li>
+                     </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
 
     <!-- Footer -->
     <footer>
+        <div class="row height-fix">
+            <div class="footer col-2">
+                <a href="#page-top"><div class="footer-icon"></div></a>
+            </div>
+            <div class="footer col-8">
+                <div class="row">
+                    <div class="col-3">
+                        <ul>
+                            <li><h4>Pages</h4></li>
+                            <li><a href="../pages/about.html">About</a></li>
+                            <li><a href="../pages/members.html">Members</a></li>
+                            <li><a href="../pages/events.html">Events</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <ul>
+                            <li><h4>Contact</h4></li>
+                            <li><a href="mailto:info@chisigma.co">Email</a></li>
+                            <li><a href="https://www.facebook.com/chisigma" target="_blank">Facebook</a></li>
+                            <li><a href="https://twitter.com/chisigma_neu" target="_blank">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="copyright">Copyright Chi Sigma, 2017</p>
+            </div>
+        </div>
     </footer>
 
     <!-- jQuery -->
@@ -184,6 +377,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+    
+
 
 </body>
 
