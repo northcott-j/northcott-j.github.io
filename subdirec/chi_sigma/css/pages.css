@@ -39,15 +39,15 @@ footer {
 
 
 
-.subheader {
+#about .subheader {
     font-size: 70px;
+    left: 0;
     line-height: 80px;
     text-align: left;
     position: absolute;
     letter-spacing: 14px;
     padding-bottom: 40px;
     font-family: 'CircularBold', Helvetica, sans-serif;
-    left: 0px;
     z-index: -10;
     opacity: 0.7;
 }
@@ -74,7 +74,7 @@ footer {
 
 }
 @media (min-width: 550px) {
-    .subheader {
+    #about .subheader {
         font-size: 10em;
         line-height: 1em;
         left: -35px;
@@ -90,7 +90,7 @@ footer {
     }
 }
 @media (min-width: 990px) {
-    .subheader {
+    #about .subheader {
         font-size: 15em;
         line-height: 1em;
         left: -75px;
@@ -109,10 +109,10 @@ footer {
     }
 }
 @media (min-width: 1180px) {
-    .subheader {
+    #about .subheader {
         left: -150px
     }
-    .header .subheader {
+    #about .header .subheader {
         left: -75px !important;
     }
 
@@ -156,13 +156,48 @@ footer {
     background-color: transparent;
 }
 
-.alex {  background-image: url("../img/profiles/melagrano-a.jpg")  }
-.jon {  background-image: url("../img/profiles/northcott-j.jpg")  }
-.zach {  background-image: url("../img/profiles/lowen-z.jpg")  }
-.rag {  background-image: url("../img/profiles/narayan-r.jpg")  }
-.ty {  background-image: url("../img/profiles/coghlan-t.jpg")  }
-.dan {  background-image: url("../img/profiles/litchmore-d.jpg")  }
-.eli {  background-image: url("../img/profiles/foreman-e.jpg")  }
+#members .subheader {
+    line-height: 80px;
+    text-align: left;
+    position: absolute;
+    letter-spacing: 14px;
+    padding-bottom: 40px;
+    font-family: 'CircularBold', Helvetica, sans-serif;
+    z-index: -10;
+    opacity: 0.7;
+}
+
+.alex {
+    background-image: url("../img/profiles/melagrano-a.jpg")  ;
+    background-position: center;
+}
+.jon {
+    background-image: url("../img/profiles/northcott-j.jpg");
+    background-position: center;
+    background-position-y: 0px;
+}
+.zach {
+    background-image: url("../img/profiles/lowen-z.jpg");
+    background-position: center;
+}
+.rag {
+    background-image: url("../img/profiles/narayan-r.jpg")  ;
+    background-position: center;
+}
+.ty {
+    background-image: url("../img/profiles/coghlan-t.jpg")  ;
+    background-position: center;
+    background-position-y: 0px;
+}
+.dan {
+    background-image: url("../img/profiles/litchmore-d.jpg");
+    background-position: center;
+}
+.eli {
+    background-image: url("../img/profiles/foreman-e.jpg");
+    background-position: center;
+    background-size: 100%;
+}
 
 .dummy-image {
     background: url(http://dummyimage.com/400x700/aaa/fff&amp;text=filler-image.jpg);
@@ -181,11 +216,12 @@ footer {
     -webkit-flex-flow: row wrap;
     justify-content: space-around;
 }
+
 .mdl-card {
     width: 100%;
-    max-width: 400px;
     margin: 25px auto;
 }
+
 .mdl-card__tag {
     padding: 10px 20px;
     font-family: 'CircularBold', Helvetica, sans-serif;
@@ -200,23 +236,18 @@ footer {
 
 
 .mdl-card {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    max-width: 330px;
     font-size: 16px;
     font-weight: 400;
     min-height: 200px;
     overflow: hidden;
-    width: 330px;
     z-index: 1;
     position: relative;
     background: #fff;
     border-radius: 2px;
     box-sizing: border-box
 }
+
 .mdl-shadow--2dp {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
 }
@@ -264,6 +295,7 @@ footer {
     color: #ffffff;
     padding-top: 350px;
 }
+
 .mdl-card--expand {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -287,10 +319,49 @@ footer {
     border-top: 1px solid rgba(0, 0, 0, .1)
 }
 
+@media (min-width: 550px) {
+    #members .subheader {
+        font-size: 6em;
+        line-height: 1em;
+
+    }
+}
+
+@media (max-width: 550px) {
+    #members .subheader {
+        font-size: 4.3em !important;
+        left: 35px !important;
+        line-height: 1em;
+    }
+
+    #members .header {
+        min-height: 180px !important;
+    }
+
+    .col-lg-8 {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    #members .subheader {
+        font-size: 10em;
+        line-height: 1em;
+
+    }
+}
+
 
 @media (min-width: 900px) {
     .mdl-card {
-        max-width: 700px
+        max-width: 700px !important;
+    }
+
+    #members .subheader {
+        font-size: 10em;
+        line-height: 1em;
+        left: 0px;
     }
     .mdl-card__title {
         max-width: 400px;
@@ -309,6 +380,16 @@ footer {
         padding-top: 200px;
     }
 }
+
+
+@media (min-width: 1000px) {
+    #members .subheader {
+        font-size: 12em;
+        left: 40px !important;
+    }
+
+}
+
 
 /*  Events Page
 =========================== */
