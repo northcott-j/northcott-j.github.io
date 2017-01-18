@@ -177,8 +177,9 @@ footer {
     background-position-y: 0px;
 }
 .zach {
-    background-image: url("../img/profiles/lowen-z.jpg");
+    background-image: url("../img/profiles/lowen-z2.jpg");
     background-position: center;
+    background-size: 85%;
 }
 .rag {
     background-image: url("../img/profiles/narayan-r.jpg")  ;
