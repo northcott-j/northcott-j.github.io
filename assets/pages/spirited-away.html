@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A collection of my prior experiences and personal projects">
+	<meta name="author" content="Jonathan Northcott">
+
+	<title>JDN | Spirited Away</title>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+	<!-- CSS -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="../css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link href="../css/simple-line-icons.css" rel="stylesheet" media="screen">
+	<link href="../css/animate.css" rel="stylesheet">
+
+	<!-- Custom styles CSS -->
+	<link href="../css/style.css" rel="stylesheet" media="screen">
+
+    <script src="../js/modernizr.custom.js"></script>
+
+</head>
+<body>
+
+	<!-- Preloader -->
+    <!--TODO: Change and unify color scheme - right now it's and orange/red-->
+
+	<div id="preloader">
+		<div id="status"></div>
+	</div>
+
+	<!-- Navigation start -->
+
+	<header class="header">
+
+		<nav class="navbar navbar-custom" role="navigation">
+
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="../../index.html">Jonathan Northcott</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="../../index.html#home">Home</a></li>
+						<li><a href="../../index.html#services">Services</a></li>
+                        <li><a href="../../index.html#portfolio">Projects</a></li>
+						<li><a href="../../index.html#contact">Contact</a></li>
+					</ul>
+				</div>
+
+			</div><!-- .container -->
+
+		</nav>
+
+	</header>
+
+	<!-- Navigation end -->
+
+	<!-- Portfolio start -->
+<!--TODO: Need to change div tagline and update photos-->
+<!--NOTE: Make subpages designed like Cyprus-->
+	<section class="pfblock">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title">Spirited Away</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle">
+              <h3>Background</h3>
+              <p>
+                For the Chi Sigma formals
+                (<a href="https://spirited-away.chisigma.co/" target="_blank">Spirited Away</a> * 2 &
+                <a href="https://formal.chisigma.co/" target="_blank">Larz Anderson</a>),
+                I needed a ticket purchasing and guest management tool that didn't cost as much as Eventbrite.
+              </p>
+              <p>
+                So I decided to build my own.
+              </p>
+              <h3>Registration Functionality</h3>
+              <img src="../images/spirited-away/signup.png" style="height: 550px;" />
+              <p style="padding-top: 10px;">
+                The guest sign-up form supports fields to capture information such as discount codes,
+                if a promoter was used, who referred someone to the event, different ticket types, as well
+                as the information you'd expect to be in a ticket purchasing form.
+              </p>
+              <p>
+                Upon registration, the guest is sent an email with either a link to the Chi Sigma Square Store
+                to complete a credit transaction, or information on how to pay via Venmo. A notification is also
+                sent via Slack to me that someone has registered.
+              </p>
+              <h3>Admin Functionality</h3>
+              <img src="../images/spirited-away/slack-bot.png" style="height: 450px;" />
+              <p style="padding-top: 10px;">
+                As an Admin, I needed to be able to quickly mark people as payment requested/paid, and to send
+                them their tickets. This is done via Slack with API hooks back to the application.
+              </p>
+              <p>
+                In the UI, I can filter down to individual guests, add notes to their accounts, and send out tickets
+                or other notifications. I can also see stats on the current guest list such as how many people are 21+
+                or the number of people still waiting to pay.
+              </p>
+              <h3>Technical Architecture</h3>
+              <p style="padding-top: 10px;">
+                The backend API of the application is written using NodeJS. This is hosted on Heroku and
+                uses TravisCI to build deployments. The database is MongoDB provided by mLab.
+              </p>
+              <p>
+                The client is hosted on the same Heroku instance as the API and is written using AngularJS.
+              </p>
+              <p>
+                Additional services used are Slack for notifications and Zoho Mail services for email.
+              </p>
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
+
+
+		</div><!-- .container -->
+
+	</section>
+
+	<!-- Portfolio end -->
+
+	<!-- Footer start -->
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-12">
+
+					<ul class="social-links">
+						<li><a target="_blank" href="https://github.com/northcott-j" class="wow fadeInUp"><i class="fa fa-github"></i></a></li>
+						<li><a target="_blank" href="https://www.linkedin.com/pub/jonathan-northcott/a8/40a/85b" class="wow fadeInUp" data-wow-delay=".1s"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="mailto:northcott.j@husky.neu.edu" class="wow fadeInUp" data-wow-delay=".2s"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+                    <p class="copyright">
+                        © 2019 Jonathan Northcott
+					</p>
+
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</footer>
+
+
+	<!-- Javascript files -->
+
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+	<script src="../js/jquery.parallax-1.1.3.js"></script>
+	<script src="../js/imagesloaded.pkgd.js"></script>
+	<script src="../js/jquery.sticky.js"></script>
+	<script src="../js/smoothscroll.js"></script>
+	<script src="../js/wow.min.js"></script>
+    <script src="../js/jquery.easypiechart.js"></script>
+    <script src="../js/waypoints.min.js"></script>
+    <script src="../js/jquery.cbpQTRotator.js"></script>
+	<script src="../js/custom.js"></script>
+
+</body>
+</html>
